@@ -1,0 +1,47 @@
+﻿body {
+
+}
+
+.vis {
+    position:relative;
+    margin:5px;
+    background-color:#ccc;
+    min-width: 350px;
+    height:200px;
+    float:left;
+    outline:1px dashed #ccc
+}
+
+.vis .menu {
+    z-index:100;
+    position:absolute;
+    right:0;
+}
+
+.vis .menu ul {
+    margin-left:0;
+    margin-top:0;
+}
+
+.vis .menu ul > li {
+    list-style:none;
+    width: 22px;
+    height: 22px;
+    float: left;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+.vis .menu ul > li > a {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    font-size:16px;
+    background-color:#000;
+    color:#fff;
+    text-align:center;
+    line-height:20px;
+}
