@@ -2,10 +2,27 @@
 [JavaScript:{ jsname: "Knockout" }]
 [JavaScript:{ path: "~/Resources/Shared/scripts/dnn.jquery.js"}]
 [JavaScript:{ path: "~/DesktopModules/DmsVis/scripts/ItemView.js"}]
+[Css:{ path: "~/DesktopModules/DmsVis/styles/View.css"}]
 
 [ModuleAction:{controlKey : "Edit", securityAccessLevel : "Edit",  titleKey: "EditModule", localResourceFile: "~/DesktopModules/DmsVis/App_LocalResources/View.resx" }]
 
 <div id="Items-[ModuleContext:ModuleId]">
+    <div class="tm_tl" data-bind="foreach: itemList">
+        <div class="vis">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a data-bind="attr: {href: editUrl}"><i class="fa fa-pencil"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mask"></div>
+            <iframe data-bind="attr: {src: url}" width="350px" height="200px"></iframe>
+        </div>
+    </div>
+</div>
+
+<!--<div id="Items-[ModuleContext:ModuleId]">
     <ul class="tm_tl" data-bind="foreach: itemList">
         <li class="tm_t">
             <h3 data-bind="text: name"></h3>
@@ -17,7 +34,7 @@
             </div>
         </li>
     </ul>
-</div>
+</div>-->
 
 <script language="javascript" type="text/javascript">
     jQuery(function ($) {

@@ -12,6 +12,13 @@
     outline:1px dashed #ccc
 }
 
+.vis .mask {
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    background-color:lightblue;
+    opacity:0.5;
+}
+
 .vis .menu {
     z-index:100;
     position:absolute;
