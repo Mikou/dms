@@ -49,7 +49,7 @@ namespace Dms.Modules.DmsVis.Components
         ///<summary>
         /// A integer with the visType if of the assigned visType for the object
         ///</summary>
-        public int AssignedVisTypeId { get; set; }
+        //public int AssignedVisTypeId { get; set; }
 
         ///<summary>
         /// An integer with the user id of the assigned user for the object

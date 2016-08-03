@@ -77,9 +77,9 @@ namespace Dms.Modules.DmsVis.Components
             return t;
         }
 
-        public IQueryable<Item> GetItems(int moduleId)
+        public IQueryable<Item> GetItems()
         {
-            Requires.NotNegative("moduleId", moduleId);
+            //Requires.NotNegative("moduleId", moduleId);
 
             IQueryable<Item> t = null;
 
@@ -87,17 +87,16 @@ namespace Dms.Modules.DmsVis.Components
             {
                 var rep = ctx.GetRepository<Item>();
 
-                t = rep.Get(moduleId).AsQueryable();
+                t = rep.Get().AsQueryable();
             }
 
             return t;
         }
 
-        public IPagedList<Item> GetItems(string searchTerm, int moduleId, int pageIndex, int pageSize)
+        public IPagedList<Item> GetItems(string searchTerm, int pageIndex, int pageSize)
         {
-            Requires.NotNegative("moduleId", moduleId);
 
-            var t = GetItems(moduleId).Where(c => c.ItemName.Contains(searchTerm)
+            var t = GetItems().Where(c => c.ItemName.Contains(searchTerm)
                                                 || c.ItemDescription.Contains(searchTerm));
 
 

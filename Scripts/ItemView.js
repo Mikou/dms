@@ -80,6 +80,7 @@ DmsVis.itemListViewModel = function (moduleId, resx) {
 DmsVis.itemViewModel = function () {
     var id = ko.observable('');
     var name = ko.observable('');
+    var url = ko.observable('');
     var description = ko.observable('');
     var assignedUser = ko.observable(-1);
     var editUrl = ko.observable('');
@@ -87,14 +88,16 @@ DmsVis.itemViewModel = function () {
     var load = function (data) {
         id(data.id)
         name(data.name);
-        assignedUser(data.assignedUserId);
+        url(data.url);
         description(data.description);
+        assignedUser(data.assignedUserId);
         editUrl(data.editUrl);
     };
 
     return {
         id: id,
         name: name,
+        url:url,
         description: description,
         editUrl: editUrl,
         load: load

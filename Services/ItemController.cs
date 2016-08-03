@@ -58,13 +58,13 @@ namespace Dms.Modules.DmsVis.Services
 
             if (Globals.IsEditMode())
             {
-                items = _repository.GetItems(ActiveModule.ModuleID)
+                items = _repository.GetItems()
                        .Select(item => new ItemViewModel(item, GetDetailUrl(item.ItemId), GetEditUrl(item.ItemId)))
                        .ToList();
             }
             else
             {
-                items = _repository.GetItems(ActiveModule.ModuleID)
+                items = _repository.GetItems()
                        .Select(item => new ItemViewModel(item, GetDetailUrl(item.ItemId), ""))
                        .ToList();
             }

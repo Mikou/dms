@@ -26,9 +26,9 @@ namespace Dms.Modules.DmsVis.Components
 
         Item GetItem(int itemId, int moduleId);
 
-        IQueryable<Item> GetItems(int moduleId);
+        IQueryable<Item> GetItems();
 
-        IPagedList<Item> GetItems(string searchTerm, int moduleId, int pageIndex, int pageSize);
+        IPagedList<Item> GetItems(string searchTerm, int pageIndex, int pageSize);
 
         void UpdateItem(Item t);
     }
